@@ -9,7 +9,10 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -22,39 +25,39 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #101130;
+  background: #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #00f5ff, #8b5cf6);
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #8b5cf6, #00f5ff);
+  background: linear-gradient(135deg, #a855f7, #8b5cf6);
 }
 
 /* Neon text effect */
 .neon-text {
-  text-shadow: 0 0 5px #00f5ff, 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 40px #00f5ff;
+  text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 40px #8b5cf6;
   animation: neon-flicker 2s infinite alternate;
 }
 
 @keyframes neon-flicker {
   0%, 100% {
-    text-shadow: 0 0 5px #00f5ff, 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 40px #00f5ff;
+    text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 40px #8b5cf6;
   }
   50% {
-    text-shadow: 0 0 2px #00f5ff, 0 0 5px #00f5ff, 0 0 10px #00f5ff, 0 0 20px #00f5ff;
+    text-shadow: 0 0 2px #8b5cf6, 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
   }
 }
 
 /* Neon button effect */
 .neon-button {
   position: relative;
-  background: linear-gradient(135deg, #00f5ff, #8b5cf6);
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
   border: none;
-  color: #101130;
+  color: #ffffff;
   font-weight: 600;
   padding: 12px 24px;
   border-radius: 8px;
@@ -79,7 +82,7 @@ html {
 
 .neon-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
 /* Particle animation */
@@ -97,7 +100,7 @@ html {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: #00f5ff;
+  background: #8b5cf6;
   border-radius: 50%;
   animation: float 15s infinite linear;
 }
@@ -148,10 +151,10 @@ html {
 
 /* Dark mode styles */
 .dark {
-  --bg-primary: #101130;
-  --bg-secondary: #1c1f73;
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
   --text-primary: #ffffff;
-  --text-secondary: #b0b8ff;
+  --text-secondary: #a855f7;
 }
 
 .light {
@@ -159,6 +162,40 @@ html {
   --bg-secondary: #e2e8f0;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
+}
+
+/* Light mode specific styles */
+.light .glass {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.light .text-gray-300 {
+  color: #374151;
+}
+
+.light .text-purple-300 {
+  color: #7c3aed;
+}
+
+.light .hero-name {
+  background: linear-gradient(135deg, #1e293b, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.light .particle {
+  background: #7c3aed;
+}
+
+.light .neon-button {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  color: #ffffff;
+}
+
+.light .neon-text {
+  text-shadow: 0 0 5px #7c3aed, 0 0 10px #7c3aed, 0 0 20px #7c3aed, 0 0 40px #7c3aed;
 }
 
 /* Responsive design */
@@ -170,4 +207,78 @@ html {
   .particles {
     display: none;
   }
+}
+
+/* Additional styles for the new design */
+.hero-name {
+  background: linear-gradient(135deg, #ffffff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+.hero-role {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Improved button styling */
+button {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced photo styling */
+.photo-frame {
+  box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Custom shadow for photo hover */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(139, 92, 246, 0.4);
+}
+
+/* Smooth animations */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced button hover effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Decorative animation delays */
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Improved text rendering */
+.text-render-optimized {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
 }
